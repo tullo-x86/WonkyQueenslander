@@ -5,15 +5,15 @@
  *      Author: tully
  */
 
-#ifndef SYNCHRONISEDFADE_H_
-#define SYNCHRONISEDFADE_H_
+#ifndef SYNCHRONOUSFADE_H_
+#define SYNCHRONOUSFADE_H_
 
 #include "Pattern.h"
 
-class SynchronisedFade: public Pattern {
+class SynchronousFade: public Pattern {
 public:
-	SynchronisedFade();
-	virtual ~SynchronisedFade();
+	SynchronousFade();
+	virtual ~SynchronousFade();
 
 	void draw();
 	void update(unsigned int deltaT);
@@ -23,4 +23,4 @@ private:
 	unsigned int _elapsed;
 };
 
-#endif /* SYNCHRONISEDFADE_H_ */
+#endif /* SYNCHRONOUSFADE_H_ */

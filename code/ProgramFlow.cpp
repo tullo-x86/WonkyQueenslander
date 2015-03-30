@@ -7,7 +7,8 @@
 
 #include "WonkyQueenslander.h"
 #include "ProgramFlow.h"
-#include "Patterns/SynchronisedFade.h"
+
+#include "Patterns/SynchronousFade.h"
 
 void readInputs()
 {
@@ -24,7 +25,7 @@ void transition()
 	random16_add_entropy(millis() & 0xffff);
 }
 
-SynchronisedFade fade;
+SynchronousFade fade;
 
 void draw(unsigned int deltaT)
 {

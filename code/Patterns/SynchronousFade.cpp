@@ -5,30 +5,27 @@
  *      Author: tully
  */
 
-#include "SynchronisedFade.h"
 #include "../WonkyQueenslander.h"
+#include "SynchronousFade.h"
 
-SynchronisedFade::SynchronisedFade() {
-	// TODO Auto-generated constructor stub
-
+SynchronousFade::SynchronousFade() {
 }
 
-SynchronisedFade::~SynchronisedFade() {
-	// TODO Auto-generated destructor stub
+SynchronousFade::~SynchronousFade() {
 }
 
-void SynchronisedFade::reset()
+void SynchronousFade::reset()
 {
 	resetSolidPixels();
 }
 
-void SynchronisedFade::update(unsigned int deltaT)
+void SynchronousFade::update(unsigned int deltaT)
 {
 
 	_elapsed += deltaT;
 }
 
-void SynchronisedFade::draw()
+void SynchronousFade::draw()
 {
 	unsigned char hue = (_elapsed / 32) & 0xff; // luckily for us, HUE_MAX_RAINBOW is 255.
 
