@@ -8,8 +8,7 @@
 #ifndef PATTERN_PATTERN_H_
 #define PATTERN_PATTERN_H_
 
-#include "pixeltypes.h"
-#include "colorutils.h"
+#include <FastLED.h>
 
 class Pattern
 {

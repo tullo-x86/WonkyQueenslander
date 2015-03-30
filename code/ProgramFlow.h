@@ -14,5 +14,8 @@ bool shouldTransition();
 void transition();
 void draw();
 
+// This is dodgy, we shouldn't be calling output() from here.
+extern void output();
+
 
 #endif /* PROGRAMFLOW_H_ */

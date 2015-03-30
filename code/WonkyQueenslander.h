@@ -46,23 +46,11 @@ void setup();
 
 #define COUNT_PIXELS (COUNT_PWM + COUNT_WS2811)
 
-struct CRGB allPixels[COUNT_PIXELS];
-struct CRGB *frameBuffer = allPixels + COUNT_PWM;
+extern struct CRGB allPixels[];
+extern struct CRGB *frameBuffer;
 
-// The lightboxes can be reassigned to match a given pixel if need be
-struct CRGB *solidPixel1;
-struct CRGB *solidPixel2;
-struct CRGB *solidPixel3;
-struct CRGB *solidPixel4;
-
-void resetSolidPixels()
-{
-	solidPixel1 = frameBuffer + 0;
-	solidPixel2 = frameBuffer + 1;
-	solidPixel3 = frameBuffer + 2;
-	solidPixel4 = frameBuffer + 3;
-}
-
+void resetSolidPixels();
+void output();
 
 //Do not add code below this line
 #endif /* _WonkyQueenslander_H_ */
