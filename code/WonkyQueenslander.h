@@ -49,6 +49,11 @@ void setup();
 extern struct CRGB allPixels[];
 extern struct CRGB *frameBuffer;
 
+extern struct CRGB *solidPixel1;
+extern struct CRGB *solidPixel2;
+extern struct CRGB *solidPixel3;
+extern struct CRGB *solidPixel4;
+
 void resetSolidPixels();
 void output();
 

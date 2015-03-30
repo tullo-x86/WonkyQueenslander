@@ -12,10 +12,7 @@
 void readInputs();
 bool shouldTransition();
 void transition();
-void draw();
-
-// This is dodgy, we shouldn't be calling output() from here.
-extern void output();
+void draw(unsigned int deltaT);
 
 
 #endif /* PROGRAMFLOW_H_ */

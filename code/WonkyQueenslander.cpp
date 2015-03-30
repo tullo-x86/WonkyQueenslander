@@ -13,7 +13,7 @@ struct CRGB *solidPixel4;
 
 void setup()
 {
-	FastLED.addLeds<WS2811, PIN_WS2811, GRB>(frameBuffer, COUNT_WS2811);
+	FastLED.addLeds<WS2811, PIN_WS2811, GRB>(frameBuffer, COUNT_WS2811).setCorrection(TypicalSMD5050);
 	memset8(allPixels, 0, COUNT_PIXELS);
 	resetSolidPixels();
 
@@ -37,15 +37,21 @@ void setup()
 	FastLED.delay(300);
 }
 
+unsigned long lastFrameTime = 0;
+
 void loop()
 {
+	unsigned long currentFrameTime = millis();
+	unsigned int deltaT = currentFrameTime - lastFrameTime;
+	lastFrameTime = currentFrameTime;
+
 	readInputs();
 	if(shouldTransition())
 	{
 		transition();
 	}
 
-	draw();
+	draw(deltaT);
 	output();
 }
 

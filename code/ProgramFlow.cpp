@@ -7,6 +7,7 @@
 
 #include "WonkyQueenslander.h"
 #include "ProgramFlow.h"
+#include "Patterns/SynchronisedFade.h"
 
 void readInputs()
 {
@@ -20,21 +21,14 @@ bool shouldTransition()
 
 void transition()
 {
-
+	random16_add_entropy(millis() & 0xffff);
 }
 
-void draw()
+SynchronisedFade fade;
+
+void draw(unsigned int deltaT)
 {
-	fill_solid(allPixels, COUNT_PIXELS, CRGB(255, 0, 0));
-	FastLED.delay(3000);
-	output();
-
-	fill_solid(allPixels, COUNT_PIXELS, CRGB(0, 255, 0));
-	FastLED.delay(3000);
-	output();
-
-	fill_solid(allPixels, COUNT_PIXELS, CRGB(0, 0, 255));
-	FastLED.delay(3000);
-	output();
+	fade.update(deltaT);
+	fade.draw();
 }
 
