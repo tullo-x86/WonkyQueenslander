@@ -30,7 +30,7 @@ void SynchronousFade::draw()
 	unsigned char hue = (_elapsed / 32) & 0xff; // luckily for us, HUE_MAX_RAINBOW is 255.
 
 	*solidPixel1 = CHSV(hue, 255, 255);
-	fill_rainbow(frameBuffer, COUNT_WS2811, hue);
+	fill_solid(frameBuffer, COUNT_WS2811, CHSV(hue, 255, 255));
 	hue += 64;
 
 	*solidPixel2 = CHSV(hue, 255, 255);

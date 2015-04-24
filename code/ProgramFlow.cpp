@@ -9,6 +9,8 @@
 #include "ProgramFlow.h"
 
 #include "Patterns/SynchronousFade.h"
+#include "Patterns/AsynchronousFade.h"
+#include "Patterns/SparksPattern.h"
 
 void readInputs()
 {
@@ -27,9 +29,14 @@ void transition()
 
 SynchronousFade fade;
 
+SparksPattern sparks(allPixels, COUNT_PIXELS, 24, 0, 20, 128, 255, 20);
+
 void draw(unsigned int deltaT)
 {
-	fade.update(deltaT);
-	fade.draw();
+	Pattern *pattern = &sparks;
+
+	pattern->reset();
+	pattern->update(deltaT);
+	pattern->draw();
 }
 

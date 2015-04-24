@@ -41,7 +41,7 @@ void setup();
 
 #define COUNT_PWM 4
 
-#define PIN_WS2811 22
+#define PIN_WS2811 42
 #define COUNT_WS2811 100
 
 #define COUNT_PIXELS (COUNT_PWM + COUNT_WS2811)

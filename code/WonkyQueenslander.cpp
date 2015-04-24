@@ -13,7 +13,7 @@ struct CRGB *solidPixel4;
 
 void setup()
 {
-	FastLED.addLeds<WS2811, PIN_WS2811, GRB>(frameBuffer, COUNT_WS2811).setCorrection(TypicalSMD5050);
+	FastLED.addLeds<WS2811, PIN_WS2811, BRG>(frameBuffer, COUNT_WS2811).setCorrection(TypicalSMD5050);
 	memset8(allPixels, 0, COUNT_PIXELS);
 	resetSolidPixels();
 
@@ -57,10 +57,10 @@ void loop()
 
 void resetSolidPixels()
 {
-	solidPixel1 = frameBuffer + 0;
-	solidPixel2 = frameBuffer + 1;
-	solidPixel3 = frameBuffer + 2;
-	solidPixel4 = frameBuffer + 3;
+	solidPixel1 = allPixels + 0;
+	solidPixel2 = allPixels + 1;
+	solidPixel3 = allPixels + 2;
+	solidPixel4 = allPixels + 3;
 }
 
 void output()
