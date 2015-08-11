@@ -8,9 +8,7 @@
 #define _WonkyQueenslander_H_
 #include "Arduino.h"
 //add your includes for the project WonkyQueenslander here
-
-#include "FastLED.h"
-
+#include <FastLED.h>
 //add your function definitions for the project WonkyQueenslander here
 
 #define PIN_R1 2

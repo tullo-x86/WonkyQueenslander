@@ -30,7 +30,7 @@
 #define MAX_SPARKS 12
 
 #include <stdlib.h>
-#include "../Patterns/Pattern.h"
+#include "Pattern.h"
 
 struct Spark;
 

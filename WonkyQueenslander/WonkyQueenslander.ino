@@ -1,3 +1,5 @@
+#include <FastLED.h>
+
 // Do not remove the include below
 #include "WonkyQueenslander.h"
 

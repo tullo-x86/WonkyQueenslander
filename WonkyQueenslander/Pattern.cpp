@@ -5,7 +5,7 @@
  *      Author: tully
  */
 
-#include "../Patterns/Pattern.h"
+#include "Pattern.h"
 
 Pattern::Pattern()
 {
