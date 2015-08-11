@@ -26,7 +26,7 @@
 
 #include "SparksPattern.h"
 
-#include "../WonkyQueenslander.h"
+#include "WonkyQueenslander.h"
 
 #include <string.h>
 #include <stdlib.h>

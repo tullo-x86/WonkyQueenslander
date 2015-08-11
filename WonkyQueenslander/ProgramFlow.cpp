@@ -8,9 +8,9 @@
 #include "WonkyQueenslander.h"
 #include "ProgramFlow.h"
 
-#include "Patterns/SynchronousFade.h"
-#include "Patterns/AsynchronousFade.h"
-#include "Patterns/SparksPattern.h"
+#include "SynchronousFade.h"
+#include "AsynchronousFade.h"
+#include "SparksPattern.h"
 
 void readInputs()
 {

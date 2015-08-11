@@ -5,7 +5,7 @@
  *      Author: tully
  */
 
-#include "../WonkyQueenslander.h"
+#include "WonkyQueenslander.h"
 #include "SynchronousFade.h"
 
 SynchronousFade::SynchronousFade() {

@@ -9,17 +9,7 @@
 #include "Arduino.h"
 //add your includes for the project WonkyQueenslander here
 
-#include <FastLED.h>
-
-//end of add your includes here
-#ifdef __cplusplus
-extern "C" {
-#endif
-void loop();
-void setup();
-#ifdef __cplusplus
-} // extern "C"
-#endif
+#include "FastLED.h"
 
 //add your function definitions for the project WonkyQueenslander here
 
